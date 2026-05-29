@@ -1,14 +1,27 @@
 [
-    {
-        "name": "Sea View Resort",
-        "city": "Goa",
-        "price_per_night": 3200,
-        "rating": 4.5
-    },
-    {
-        "name": "Beach Paradise",
-        "city": "Goa",
-        "price_per_night": 4500,
-        "rating": 4.7
-    }
+  {"name": "Sea View Resort", "city": "Goa", "price_per_night": 3200, "rating": 4.5, "amenities": ["Pool", "Beach Access", "Spa", "Restaurant"], "type": "Resort"},
+  {"name": "The Leela Goa", "city": "Goa", "price_per_night": 12000, "rating": 4.8, "amenities": ["Pool", "Private Beach", "Spa", "Multiple Restaurants", "Golf"], "type": "Luxury"},
+  {"name": "Novotel Goa", "city": "Goa", "price_per_night": 5500, "rating": 4.3, "amenities": ["Pool", "Gym", "Restaurant", "Bar"], "type": "Business"},
+  {"name": "OYO Sunrise Inn", "city": "Goa", "price_per_night": 1200, "rating": 3.5, "amenities": ["AC", "WiFi", "Room Service"], "type": "Budget"},
+  {"name": "Taj Holiday Village", "city": "Goa", "price_per_night": 9500, "rating": 4.7, "amenities": ["Private Beach", "Pool", "Spa", "Tennis", "Yoga"], "type": "Luxury"},
+  {"name": "The Park Hotel", "city": "Mumbai", "price_per_night": 8000, "rating": 4.4, "amenities": ["Rooftop Pool", "Gym", "Restaurant", "Bar", "Spa"], "type": "Luxury"},
+  {"name": "ITC Maratha", "city": "Mumbai", "price_per_night": 11000, "rating": 4.7, "amenities": ["Pool", "Spa", "Multiple Restaurants", "Gym"], "type": "Luxury"},
+  {"name": "Ibis Mumbai", "city": "Mumbai", "price_per_night": 3500, "rating": 4.0, "amenities": ["Gym", "Restaurant", "WiFi", "Bar"], "type": "Business"},
+  {"name": "OYO Townhouse", "city": "Mumbai", "price_per_night": 1800, "rating": 3.6, "amenities": ["AC", "WiFi", "Breakfast"], "type": "Budget"},
+  {"name": "Taj Mahal Palace", "city": "Mumbai", "price_per_night": 25000, "rating": 4.9, "amenities": ["Pool", "Spa", "Fine Dining", "Buttle Service", "Sea View"], "type": "Luxury"},
+  {"name": "Rambagh Palace", "city": "Jaipur", "price_per_night": 18000, "rating": 4.9, "amenities": ["Pool", "Spa", "Royal Dining", "Heritage Tour"], "type": "Heritage"},
+  {"name": "ITC Rajputana", "city": "Jaipur", "price_per_night": 7500, "rating": 4.5, "amenities": ["Pool", "Spa", "Restaurant", "Gym"], "type": "Luxury"},
+  {"name": "Hotel Diggi Palace", "city": "Jaipur", "price_per_night": 2800, "rating": 4.1, "amenities": ["Garden", "Restaurant", "Heritage Rooms"], "type": "Heritage"},
+  {"name": "OYO Budget Inn", "city": "Jaipur", "price_per_night": 900, "rating": 3.2, "amenities": ["AC", "WiFi"], "type": "Budget"},
+  {"name": "Trident Jaipur", "city": "Jaipur", "price_per_night": 5500, "rating": 4.4, "amenities": ["Pool", "Spa", "Restaurant", "Gym", "Garden"], "type": "Business"},
+  {"name": "The Oberoi Cecil", "city": "Shimla", "price_per_night": 14000, "rating": 4.8, "amenities": ["Mountain View", "Spa", "Fine Dining", "Heritage Tour"], "type": "Heritage"},
+  {"name": "Wildflower Hall", "city": "Shimla", "price_per_night": 20000, "rating": 4.9, "amenities": ["Infinity Pool", "Spa", "Fine Dining", "Adventure Sports"], "type": "Luxury"},
+  {"name": "Hotel Combermere", "city": "Shimla", "price_per_night": 3500, "rating": 4.0, "amenities": ["Restaurant", "Bar", "Mountain View", "WiFi"], "type": "Business"},
+  {"name": "ITC Windsor", "city": "Bangalore", "price_per_night": 9000, "rating": 4.6, "amenities": ["Pool", "Spa", "Fine Dining", "Gym"], "type": "Luxury"},
+  {"name": "Lemon Tree Hotel", "city": "Bangalore", "price_per_night": 3200, "rating": 4.0, "amenities": ["Pool", "Restaurant", "Gym", "Bar"], "type": "Business"},
+  {"name": "OYO City Stay", "city": "Bangalore", "price_per_night": 1400, "rating": 3.4, "amenities": ["AC", "WiFi", "Breakfast"], "type": "Budget"},
+  {"name": "Leela Palace", "city": "Bangalore", "price_per_night": 16000, "rating": 4.8, "amenities": ["Pool", "Spa", "Multiple Restaurants", "Buttle Service"], "type": "Luxury"},
+  {"name": "Taj Coromandel", "city": "Chennai", "price_per_night": 10000, "rating": 4.6, "amenities": ["Pool", "Spa", "Restaurant", "Gym", "Bar"], "type": "Luxury"},
+  {"name": "Hyatt Regency", "city": "Hyderabad", "price_per_night": 8500, "rating": 4.5, "amenities": ["Pool", "Spa", "Multiple Restaurants", "Gym"], "type": "Luxury"},
+  {"name": "Novotel Hyderabad", "city": "Hyderabad", "price_per_night": 5000, "rating": 4.2, "amenities": ["Pool", "Restaurant", "Gym", "Bar"], "type": "Business"}
 ]

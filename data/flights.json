@@ -1,16 +1,22 @@
 [
-    {
-        "source": "Delhi",
-        "destination": "Goa",
-        "airline": "IndiGo",
-        "price": 4800,
-        "duration": "2h 30m"
-    },
-    {
-        "source": "Delhi",
-        "destination": "Goa",
-        "airline": "Air India",
-        "price": 5200,
-        "duration": "2h 45m"
-    }
+  {"airline": "IndiGo", "source": "Delhi", "destination": "Goa", "price": 4800, "duration": "2h 30m", "departure": "06:00", "arrival": "08:30", "class": "Economy"},
+  {"airline": "Air India", "source": "Delhi", "destination": "Goa", "price": 5500, "duration": "2h 45m", "departure": "09:00", "arrival": "11:45", "class": "Economy"},
+  {"airline": "SpiceJet", "source": "Delhi", "destination": "Goa", "price": 4200, "duration": "2h 50m", "departure": "14:00", "arrival": "16:50", "class": "Economy"},
+  {"airline": "Vistara", "source": "Delhi", "destination": "Goa", "price": 7800, "duration": "2h 20m", "departure": "07:30", "arrival": "09:50", "class": "Business"},
+  {"airline": "IndiGo", "source": "Mumbai", "destination": "Goa", "price": 2500, "duration": "1h 10m", "departure": "08:00", "arrival": "09:10", "class": "Economy"},
+  {"airline": "Air India", "source": "Mumbai", "destination": "Goa", "price": 3200, "duration": "1h 15m", "departure": "10:30", "arrival": "11:45", "class": "Economy"},
+  {"airline": "SpiceJet", "source": "Mumbai", "destination": "Goa", "price": 2100, "duration": "1h 20m", "departure": "15:00", "arrival": "16:20", "class": "Economy"},
+  {"airline": "IndiGo", "source": "Bangalore", "destination": "Goa", "price": 3100, "duration": "1h 20m", "departure": "07:00", "arrival": "08:20", "class": "Economy"},
+  {"airline": "Air India", "source": "Bangalore", "destination": "Goa", "price": 3800, "duration": "1h 25m", "departure": "11:00", "arrival": "12:25", "class": "Economy"},
+  {"airline": "IndiGo", "source": "Delhi", "destination": "Mumbai", "price": 3900, "duration": "2h 0m", "departure": "06:30", "arrival": "08:30", "class": "Economy"},
+  {"airline": "SpiceJet", "source": "Delhi", "destination": "Mumbai", "price": 3500, "duration": "2h 10m", "departure": "13:00", "arrival": "15:10", "class": "Economy"},
+  {"airline": "IndiGo", "source": "Delhi", "destination": "Jaipur", "price": 2200, "duration": "1h 0m", "departure": "08:00", "arrival": "09:00", "class": "Economy"},
+  {"airline": "Air India", "source": "Delhi", "destination": "Jaipur", "price": 2800, "duration": "1h 10m", "departure": "10:00", "arrival": "11:10", "class": "Economy"},
+  {"airline": "IndiGo", "source": "Mumbai", "destination": "Jaipur", "price": 3400, "duration": "1h 40m", "departure": "09:00", "arrival": "10:40", "class": "Economy"},
+  {"airline": "IndiGo", "source": "Delhi", "destination": "Shimla", "price": 4500, "duration": "1h 30m", "departure": "07:00", "arrival": "08:30", "class": "Economy"},
+  {"airline": "Air India", "source": "Mumbai", "destination": "Bangalore", "price": 4100, "duration": "1h 45m", "departure": "06:00", "arrival": "07:45", "class": "Economy"},
+  {"airline": "IndiGo", "source": "Bangalore", "destination": "Delhi", "price": 5100, "duration": "2h 45m", "departure": "05:30", "arrival": "08:15", "class": "Economy"},
+  {"airline": "SpiceJet", "source": "Chennai", "destination": "Goa", "price": 3700, "duration": "1h 35m", "departure": "11:00", "arrival": "12:35", "class": "Economy"},
+  {"airline": "IndiGo", "source": "Hyderabad", "destination": "Goa", "price": 3300, "duration": "1h 25m", "departure": "08:30", "arrival": "09:55", "class": "Economy"},
+  {"airline": "Air India", "source": "Kolkata", "destination": "Goa", "price": 6200, "duration": "3h 0m", "departure": "07:00", "arrival": "10:00", "class": "Economy"}
 ]

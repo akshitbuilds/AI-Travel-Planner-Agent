@@ -1,14 +1,32 @@
 [
-    {
-        "name": "Baga Beach",
-        "city": "Goa",
-        "rating": 4.8,
-        "type": "Beach"
-    },
-    {
-        "name": "Fort Aguada",
-        "city": "Goa",
-        "rating": 4.6,
-        "type": "Historical"
-    }
+  {"name": "Baga Beach", "city": "Goa", "type": "Beach", "rating": 4.4, "entry_fee": 0, "best_time": "Morning", "description": "Popular beach known for water sports and nightlife"},
+  {"name": "Candolim Beach", "city": "Goa", "type": "Beach", "rating": 4.3, "entry_fee": 0, "best_time": "Morning", "description": "Serene beach with fewer crowds, great for relaxing"},
+  {"name": "Basilica of Bom Jesus", "city": "Goa", "type": "Heritage", "rating": 4.6, "entry_fee": 0, "best_time": "Morning", "description": "UNESCO World Heritage Site, holds mortal remains of St. Francis Xavier"},
+  {"name": "Fort Aguada", "city": "Goa", "type": "Heritage", "rating": 4.3, "entry_fee": 30, "best_time": "Evening", "description": "17th century Portuguese fort with stunning sunset views"},
+  {"name": "Dudhsagar Waterfall", "city": "Goa", "type": "Nature", "rating": 4.7, "entry_fee": 400, "best_time": "Morning", "description": "Spectacular four-tiered waterfall, one of India's tallest"},
+  {"name": "Calangute Beach", "city": "Goa", "type": "Beach", "rating": 4.1, "entry_fee": 0, "best_time": "Morning", "description": "Queen of beaches, great for water sports"},
+  {"name": "Old Goa Heritage Walk", "city": "Goa", "type": "Heritage", "rating": 4.4, "entry_fee": 0, "best_time": "Morning", "description": "Walk through the historic Portuguese quarter"},
+  {"name": "Spice Plantation Tour", "city": "Goa", "type": "Nature", "rating": 4.5, "entry_fee": 400, "best_time": "Morning", "description": "Explore tropical spice farms with guided tours and lunch"},
+  {"name": "Marine Drive", "city": "Mumbai", "type": "Landmark", "rating": 4.5, "entry_fee": 0, "best_time": "Evening", "description": "Iconic promenade along the Arabian Sea"},
+  {"name": "Gateway of India", "city": "Mumbai", "type": "Heritage", "rating": 4.5, "entry_fee": 0, "best_time": "Morning", "description": "Iconic arch monument overlooking the Arabian Sea"},
+  {"name": "Elephanta Caves", "city": "Mumbai", "type": "Heritage", "rating": 4.3, "entry_fee": 600, "best_time": "Morning", "description": "UNESCO World Heritage rock-cut caves with ancient sculptures"},
+  {"name": "Juhu Beach", "city": "Mumbai", "type": "Beach", "rating": 4.0, "entry_fee": 0, "best_time": "Evening", "description": "Popular beach with street food stalls and sunset views"},
+  {"name": "Chhatrapati Shivaji Terminus", "city": "Mumbai", "type": "Heritage", "rating": 4.6, "entry_fee": 0, "best_time": "Morning", "description": "UNESCO World Heritage Victorian Gothic architecture"},
+  {"name": "Amber Fort", "city": "Jaipur", "type": "Heritage", "rating": 4.7, "entry_fee": 550, "best_time": "Morning", "description": "Stunning hilltop fort with intricate architecture and elephant rides"},
+  {"name": "Hawa Mahal", "city": "Jaipur", "type": "Heritage", "rating": 4.5, "entry_fee": 200, "best_time": "Morning", "description": "Palace of Winds with 953 small windows and honeycombed structure"},
+  {"name": "City Palace", "city": "Jaipur", "type": "Heritage", "rating": 4.5, "entry_fee": 700, "best_time": "Morning", "description": "Royal palace complex in the heart of Jaipur"},
+  {"name": "Jantar Mantar", "city": "Jaipur", "type": "Heritage", "rating": 4.3, "entry_fee": 200, "best_time": "Morning", "description": "UNESCO World Heritage astronomical observatory"},
+  {"name": "Nahargarh Fort", "city": "Jaipur", "type": "Heritage", "rating": 4.4, "entry_fee": 200, "best_time": "Evening", "description": "Hilltop fort with panoramic views of Jaipur city"},
+  {"name": "Johri Bazaar", "city": "Jaipur", "type": "Shopping", "rating": 4.2, "entry_fee": 0, "best_time": "Morning", "description": "Famous market for jewellery, textiles, and handicrafts"},
+  {"name": "Kufri", "city": "Shimla", "type": "Nature", "rating": 4.3, "entry_fee": 0, "best_time": "Morning", "description": "Popular hill station for skiing, trekking and horse riding"},
+  {"name": "The Ridge", "city": "Shimla", "type": "Landmark", "rating": 4.4, "entry_fee": 0, "best_time": "Morning", "description": "Large open space in the heart of Shimla with beautiful views"},
+  {"name": "Jakhu Temple", "city": "Shimla", "type": "Religious", "rating": 4.4, "entry_fee": 0, "best_time": "Morning", "description": "Ancient temple dedicated to Lord Hanuman on Jakhu Hill"},
+  {"name": "Mall Road", "city": "Shimla", "type": "Shopping", "rating": 4.3, "entry_fee": 0, "best_time": "Evening", "description": "Heart of Shimla, lined with shops, restaurants and cafes"},
+  {"name": "Lalbagh Botanical Garden", "city": "Bangalore", "type": "Nature", "rating": 4.4, "entry_fee": 20, "best_time": "Morning", "description": "240-acre botanical garden with diverse flora and a glass house"},
+  {"name": "Cubbon Park", "city": "Bangalore", "type": "Nature", "rating": 4.4, "entry_fee": 0, "best_time": "Morning", "description": "300-acre lush green park in the heart of the city"},
+  {"name": "Bangalore Palace", "city": "Bangalore", "type": "Heritage", "rating": 4.2, "entry_fee": 460, "best_time": "Morning", "description": "Tudor-style palace inspired by Windsor Castle"},
+  {"name": "ISKCON Temple", "city": "Bangalore", "type": "Religious", "rating": 4.6, "entry_fee": 0, "best_time": "Morning", "description": "One of the largest ISKCON temples in the world"},
+  {"name": "Charminar", "city": "Hyderabad", "type": "Heritage", "rating": 4.4, "entry_fee": 25, "best_time": "Morning", "description": "Iconic 16th century mosque and monument"},
+  {"name": "Golconda Fort", "city": "Hyderabad", "type": "Heritage", "rating": 4.4, "entry_fee": 200, "best_time": "Morning", "description": "Magnificent medieval fort with acoustic system"},
+  {"name": "Ramoji Film City", "city": "Hyderabad", "type": "Entertainment", "rating": 4.3, "entry_fee": 1200, "best_time": "Morning", "description": "World's largest film studio complex"}
 ]
