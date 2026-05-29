@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Sea View Resort",
+        "city": "Goa",
+        "price_per_night": 3200,
+        "rating": 4.5
+    },
+    {
+        "name": "Beach Paradise",
+        "city": "Goa",
+        "price_per_night": 4500,
+        "rating": 4.7
+    }
+]

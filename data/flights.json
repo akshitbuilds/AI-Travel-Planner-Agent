@@ -1,0 +1,16 @@
+[
+    {
+        "source": "Delhi",
+        "destination": "Goa",
+        "airline": "IndiGo",
+        "price": 4800,
+        "duration": "2h 30m"
+    },
+    {
+        "source": "Delhi",
+        "destination": "Goa",
+        "airline": "Air India",
+        "price": 5200,
+        "duration": "2h 45m"
+    }
+]

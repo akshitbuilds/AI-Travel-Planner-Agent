@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Baga Beach",
+        "city": "Goa",
+        "rating": 4.8,
+        "type": "Beach"
+    },
+    {
+        "name": "Fort Aguada",
+        "city": "Goa",
+        "rating": 4.6,
+        "type": "Historical"
+    }
+]
