@@ -19,7 +19,7 @@ reasoning step-by-step like a human travel expert.
 
 ## 🚀 Live Demo
 
-🔗 **[Click here to open the app](https://ai-travel-planner-agent.streamlit.app)**
+🔗 **[Click here to open the app](https://ai-travel-planner-agent-xvjewyslamrwsigsmvfvkk.streamlit.app/)**
 
 > The app works even without a Groq key using the built-in **deterministic fallback agent**.
 
