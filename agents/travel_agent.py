@@ -12,9 +12,19 @@ FIXES:
 """
 
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
 from langchain_groq import ChatGroq
-from langchain.agents import AgentExecutor, create_react_agent
 from langchain_core.prompts import PromptTemplate
+
+try:
+    # langchain >= 0.2 — preferred
+    from langchain.agents import AgentExecutor, create_react_agent
+except ImportError:
+    # fallback for slightly older installs
+    from langchain.agents import AgentExecutor
+    from langchain.agents.react.agent import create_react_agent
 
 from tools.flight_tool import search_flights
 from tools.hotel_tool import recommend_hotel
