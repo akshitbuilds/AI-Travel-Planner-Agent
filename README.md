@@ -1,52 +1,64 @@
 # ✈️ AI Travel Planner Agent
 
-An **Agentic AI** travel planning assistant built with **LangChain ReAct Agent**, **Python**, and **Streamlit**.
-The system autonomously plans complete trips by calling 5 specialised AI tools — searching flights, recommending hotels,
-discovering places, fetching live weather, and estimating budget.
+An **Agentic AI** travel planning assistant built with **LangChain ReAct Agent**, **Python**, and **Streamlit**.  
+The system autonomously plans complete trips by calling 5 specialised AI tools — searching flights,
+recommending hotels, discovering attractions, fetching live weather, and estimating the full budget.
 
 ---
 
 ## 🎯 Problem Statement
 
-Planning a trip requires coordinating flights, hotels, attractions, weather, and budget across multiple websites.
-This project solves that by building a single intelligent agent that handles all of it autonomously,
+Planning a trip requires coordinating flights, hotels, attractions, weather, and budget across
+multiple websites. Travellers switch between apps, compare inconsistent information, and manually
+build itineraries that are often inefficient or incomplete.
+
+This project solves that with a single intelligent agent that handles everything autonomously,
 reasoning step-by-step like a human travel expert.
 
 ---
 
 ## 🚀 Live Demo
 
-Deploy on [Streamlit Cloud](https://streamlit.io/cloud) — connect your GitHub repo and add your `OPENAI_API_KEY` in Secrets.
+🔗 **[Click here to open the app](https://ai-travel-planner-agent.streamlit.app)**
 
-> **Note:** The app works even without an OpenAI key using the built-in deterministic fallback agent.
+> The app works even without a Groq key using the built-in **deterministic fallback agent**.
 
 ---
 
 ## 🤖 Architecture
 
 ```
-LangChain ReAct Agent
-  ├── Tool 1: search_flights      → flights.json (cheapest flight selection)
-  ├── Tool 2: recommend_hotel     → hotels.json  (highest-rated within budget)
-  ├── Tool 3: find_places         → places.json  (top-rated attractions)
-  ├── Tool 4: get_weather         → Open-Meteo API (live day-by-day forecast)
-  └── Tool 5: estimate_budget     → Computed from all tool outputs
+User Query (Streamlit UI)
+        │
+        ▼
+LangChain ReAct Agent  ←──  Groq LLaMA-3 70B (LLM)
+        │
+        ├── Tool 1: search_flights    →  flights.json  (cheapest flight)
+        ├── Tool 2: recommend_hotel   →  hotels.json   (highest-rated in budget)
+        ├── Tool 3: find_places       →  places.json   (top attractions)
+        ├── Tool 4: get_weather       →  Open-Meteo API (live forecast, free)
+        └── Tool 5: estimate_budget   →  Computed from all tool outputs
+                │
+                ▼
+        Structured Trip Plan
+        (Streamlit Tabbed UI)
 ```
 
-The agent uses **ReAct (Reason + Act)** prompting — it thinks before each action and justifies every decision.
+The agent uses **ReAct (Reason + Act)** prompting — it thinks before every action and
+justifies every recommendation.
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Component | Technology |
-|-----------|-----------|
-| Language | Python 3.10+ |
-| AI Framework | LangChain (ReAct Agent) |
-| LLM | OpenAI GPT-3.5-turbo |
-| Weather API | Open-Meteo (free, no key) |
-| Frontend | Streamlit |
-| Data | JSON datasets (flights, hotels, places) |
+| Component      | Technology                        |
+|----------------|-----------------------------------|
+| Language       | Python 3.10+                      |
+| AI Framework   | LangChain (ReAct Agent)           |
+| LLM            | Groq — LLaMA-3 70B (free tier)   |
+| Weather API    | Open-Meteo (free, no key needed)  |
+| Frontend       | Streamlit                         |
+| Data           | JSON datasets (flights / hotels / places) |
 
 ---
 
@@ -57,29 +69,30 @@ AI-Travel-Planner-Agent/
 │
 ├── agents/
 │   ├── __init__.py
-│   └── travel_agent.py        # LangChain ReAct agent + fallback planner
+│   └── travel_agent.py        # LangChain ReAct agent + deterministic fallback
 │
 ├── tools/
 │   ├── __init__.py
-│   ├── flight_tool.py         # @tool — search & rank flights
+│   ├── flight_tool.py         # @tool — search & rank flights by price
 │   ├── hotel_tool.py          # @tool — recommend hotels by rating/budget
 │   ├── places_tool.py         # @tool — discover top attractions
-│   ├── weather_tool.py        # @tool — live weather from Open-Meteo
+│   ├── weather_tool.py        # @tool — live forecast via Open-Meteo
 │   └── budget_tool.py         # @tool — full cost breakdown
 │
 ├── data/
-│   ├── flights.json           # Flight dataset (20+ routes)
-│   ├── hotels.json            # Hotel dataset (25+ hotels, 8 cities)
-│   └── places.json            # Tourist places (30+ POIs, 8 cities)
+│   ├── flights.json           # Flight dataset (routes across India)
+│   ├── hotels.json            # Hotel dataset (multiple cities)
+│   └── places.json            # Tourist places / POIs (multiple cities)
 │
 ├── utils/
 │   ├── __init__.py
-│   ├── data_loader.py         # JSON data loading utilities
-│   └── weather_utils.py       # Open-Meteo API integration + city coords
+│   ├── data_loader.py         # JSON data loading helpers
+│   └── weather_utils.py       # Open-Meteo API integration + city coordinates
 │
 ├── app.py                     # Streamlit frontend (tabbed UI)
 ├── requirements.txt           # Python dependencies
-├── .env.example               # API key template
+├── .env.example               # API key template (copy → .env)
+├── .gitignore                 # Keeps secrets and caches out of Git
 └── README.md                  # This file
 ```
 
@@ -98,80 +111,115 @@ cd AI-Travel-Planner-Agent
 pip install -r requirements.txt
 ```
 
-### 3. Set up API key (optional)
+### 3. Set up your Groq API key
 ```bash
 cp .env.example .env
-# Edit .env and add your OPENAI_API_KEY
+# Open .env and paste your GROQ_API_KEY
 ```
-> Get a free key at [platform.openai.com](https://platform.openai.com). The app works without it too.
+> Get a **free** Groq key at [console.groq.com](https://console.groq.com) — no credit card needed.  
+> The app works without a key too, using the built-in deterministic fallback.
 
 ### 4. Run the app
 ```bash
 streamlit run app.py
 ```
 
+Open [http://localhost:8501](http://localhost:8501) in your browser.
+
+---
+
+## 🌐 Deploy to Streamlit Cloud (Free)
+
+1. Push your code to GitHub (already done ✅)
+2. Go to [share.streamlit.io](https://share.streamlit.io) → **New app**
+3. Connect your repo: `akshitbuilds/AI-Travel-Planner-Agent`
+4. Set **Main file**: `app.py`
+5. Go to **Advanced settings → Secrets** and add:
+```toml
+GROQ_API_KEY = "your_actual_groq_key_here"
+```
+6. Click **Deploy** — your public URL will be ready in ~2 minutes.
+
 ---
 
 ## 🗺️ Supported Cities
 
-| Route | Destinations |
-|-------|-------------|
-| Sources | Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Kolkata |
-| Destinations | Goa, Jaipur, Shimla, Mumbai, Bangalore, Hyderabad |
+| Role         | Cities                                                                 |
+|--------------|------------------------------------------------------------------------|
+| Departure    | Delhi, Mumbai, Bangalore, Chennai, Kolkata, Hyderabad, Pune, Jaipur   |
+| Destination  | Goa, Jaipur, Agra, Udaipur, Varanasi, Rishikesh, Kochi, Ahmedabad + more |
+
+> Attractions are available for all 15 cities with curated fallback data even when not in the local JSON.
 
 ---
 
 ## 🌟 Key Features
 
-- **LangChain ReAct Agent** — autonomous multi-step reasoning
-- **5 LangChain @tool functions** — each independently testable
-- **Cheapest flight selection** — filtered and ranked from dataset
+- **LangChain ReAct Agent** — multi-step autonomous reasoning
+- **5 LangChain `@tool` functions** — each independently testable
+- **Cheapest flight selection** — filtered and sorted from dataset
 - **Best hotel ranking** — highest rating within user's budget
-- **Live weather forecast** — real daily forecasts via Open-Meteo API
-- **Day-wise itinerary** — morning + afternoon activities per day
-- **AI reasoning output** — agent explains every decision made
-- **Tabbed Streamlit UI** — Flight/Hotel | Itinerary | Weather | Budget | Reasoning
-- **Graceful fallback** — works without OpenAI key using deterministic agent
+- **Live weather forecast** — real daily forecasts via Open-Meteo API (no key)
+- **Day-wise itinerary** — morning + afternoon activity slots per day
+- **AI reasoning output** — agent explains every decision it made
+- **Tabbed Streamlit UI** — Flight & Hotel | Itinerary | Weather | Budget | AI Reasoning
+- **Graceful fallback** — deterministic planner when Groq API unavailable
 - **Full error handling** — try/except on all tool calls and API requests
+- **No N/A** — curated attraction data for all 15 cities, always shows real count
 
 ---
 
 ## 📊 Sample Output
 
 ```
-Your 3-Day Trip to Goa (Delhi → Goa)
+Your 3-Day Trip to Goa  (Delhi → Goa)
 
-Flight Selected:
-  SpiceJet — ₹4,200 | Duration: 2h 50m | Dep: 14:00
-  Reason: Lowest price among 4 available flights
+✈️  Flight Selected
+    SpiceJet — ₹4,200 | 2h 50m | Dep: 14:00
+    Reason: Lowest price among all available flights on this route
 
-Hotel Recommended:
-  Sea View Resort — ₹3,200/night ⭐4.5 | Pool, Beach Access, Spa
-  Reason: Highest rated within ₹5,000/night budget
+🏨  Hotel Recommended
+    Sea View Resort — ₹3,200/night ⭐ 4.5 | Pool · Beach Access · Spa
+    Reason: Highest rated hotel within your ₹5,000/night budget
 
-Day 1: Baga Beach (Morning) + Fort Aguada (Afternoon)
-Day 2: Basilica of Bom Jesus (Morning) + Dudhsagar Waterfall (Afternoon)
-Day 3: Spice Plantation Tour (Morning) + Old Goa Heritage Walk (Afternoon)
+📅  Itinerary
+    Day 1: Baga Beach (Morning) + Fort Aguada (Afternoon)
+    Day 2: Basilica of Bom Jesus (Morning) + Dudhsagar Falls (Afternoon)
+    Day 3: Anjuna Flea Market (Morning) + Palolem Beach (Afternoon)
 
-Budget:  Flight ₹4,200 + Hotel ₹9,600 + Food ₹2,400 + Transport ₹1,800 + Activities ₹1,200
-Total:   ₹19,200
+💰  Budget Breakdown
+    Flight      ₹4,200
+    Hotel       ₹9,600   (3 nights × ₹3,200)
+    Food        ₹2,400
+    Transport   ₹1,800
+    Activities  ₹1,200
+    ─────────────────────
+    Total       ₹19,200
 ```
 
 ---
 
 ## 🔮 Future Improvements
 
-- Real-time flight APIs (Skyscanner, Aviasales)
+- Real-time flight APIs (Skyscanner, Amadeus)
 - Hotel booking integration (Booking.com API)
 - Google Maps route planning
 - PDF itinerary export
 - Multi-city trip planning
-- User preference memory
+- User preference memory across sessions
 
 ---
 
-## 👨‍💻 Developed By
+## 📜 Project Context
+
+Built as part of an **Agentic AI Internship** — Travel/Tourism Domain.
+
+**Skills demonstrated:** Python · LangChain · Prompt Engineering · Agentic AI ·
+API Integration · Streamlit · JSON Data Handling · ReAct Reasoning
+
+---
+
+## 👨‍💻 Developer
 
 **Akshit Agrawal**  
-Agentic AI Internship Project — Travel/Tourism Domain  
-Built with Python · LangChain · Streamlit · Open-Meteo API
+🔗 [github.com/akshitbuilds](https://github.com/akshitbuilds)
